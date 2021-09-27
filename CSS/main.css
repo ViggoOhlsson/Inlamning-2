@@ -1,0 +1,22 @@
+html body {
+    font-size: 12pt;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    display: grid;
+
+}
+header {
+    height: 200vh;
+    background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+    background-position:center;
+    background-size: cover;
+
+}
+.header-top {
+    display: flex;
+    background-color: rgb(255, 255, 255, 0.2);
+    height: 200px;
+    flex-direction: column;
+}
