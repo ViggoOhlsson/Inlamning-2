@@ -1,2 +1,192 @@
 @import 'mixins';
-@import 'variales';
+@import 'variables';
+
+html {
+    scroll-behavior: smooth;
+}
+html body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif
+}
+body {
+    display: grid;
+    font-size: 12pt;
+    color: rgb(233, 233, 233);
+
+}
+header {
+    height: 100vh;
+    background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+header > .arrow-container > a{
+    color: white;
+}
+.header-top {
+    display: flex;
+    background-color: rgba(221, 209, 209, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.header-top > i {
+    float: right;
+    align-self: flex-end;
+    padding: 0 10px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.header-top > nav > a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+}
+.header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    width: 80%;
+}
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 40px 0;
+}
+main {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 0;
+}
+main > .arrow-container > a{
+    color: black;
+}
+.profil-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.profil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+}
+.profil-namn {
+    font-weight: bold;
+}
+.profil-bild {
+    margin: 0;
+    transition: 1s;
+}
+.profil-bild > img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgb(104, 104, 104);
+    transition: 1s;
+}
+.profil-bild:hover > img {
+    box-shadow: 0 0 90px rgb(0, 0, 0);
+    transition: 1s;
+}
+.profil-bild:hover {
+    margin: 20px 0;
+    transition: 1s;
+}
+.profil-bio {
+    background-color: rgb(211, 211, 211);
+    padding: 30px;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.85em;
+}
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    align-items: center;
+    padding: 40px 0;
+    font-size: 1.3em;
+}
+.footer-content-container {
+    width: 60%
+}
+.footer-content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.footer-content > i {
+    text-align: center;
+}
+.contact-container {
+    display: grid;
+    gap: 15px 7px;
+    grid-template-columns: auto 1fr;
+}
+@media screen and (min-width: 768px) {
+    .header-top {
+        flex-direction: row;
+        justify-content: right;
+        padding: 30px;
+        font-size: 1.6rem;
+    }
+    .header-top > i {
+        display: none;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    nav > a:hover {
+        text-decoration: underline white;
+    }
+    .profil-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px 0;
+        width: 90%
+    }
+    .profil-container {
+        width: 50%;
+    }
+    .profil-bild {
+        width: 70%;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 40px
+    }
+    .footer-content {
+        width: auto;
+        justify-content: flex-start;
+    }
+}
