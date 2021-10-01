@@ -6,7 +6,7 @@
     // Content i en extend
     color:white;
 }
-@mixin mixin() {
-    // Content i en mixin
-    color: white;
+@mixin spacing($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
 }

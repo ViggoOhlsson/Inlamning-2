@@ -1,5 +1,5 @@
 @import 'mixins';
-@import 'variables';
+@use 'variables' as *;
 
 html {
     scroll-behavior: smooth;
@@ -33,12 +33,12 @@ header > .arrow-container > a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 0;
+    @include spacing(0, 5px 0);
 }
 .header-top > i {
     float: right;
     align-self: flex-end;
-    padding: 0 10px;
+    @include spacing(0, 0 10px);
 }
 nav {
     display: flex;
@@ -63,7 +63,7 @@ nav {
 .arrow-container {
     display: flex;
     justify-content: center;
-    margin: 0 0 40px 0;
+    @include spacing(0 0 40px 0, 0);
 }
 main {
     color: black;
