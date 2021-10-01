@@ -9,6 +9,4 @@ gulp.task('watch-scss', function() {
     gulp.watch("scss/main.scss", gulp.series('compile'));
 });
 
-gulp.task('default', function() {
-    gulp.series('compile','watch.scss');
-});
+gulp.task('default', gulp.series('compile','watch.scss'), function(){});
