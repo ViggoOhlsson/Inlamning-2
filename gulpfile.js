@@ -12,4 +12,6 @@ gulp.task('watch-scss', function() {
 gulp.task('default', gulp.series('compile','watch-scss'), function(){});
 
 //install order
-// npm install -global
+// npm install -global gulp-cli
+// npm install gulp@4.0.2
+// npm install gulp-sass@4.0.2

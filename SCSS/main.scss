@@ -1,5 +1,4 @@
 @import 'mixins';
-@use 'variables' as *;
 
 html {
     scroll-behavior: smooth;
@@ -28,12 +27,51 @@ header > .arrow-container > a{
     color: white;
 }
 .header-top {
+    width: 100%;
     display: flex;
     background-color: rgba(221, 209, 209, 0.1);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     @include spacing(0, 5px 0);
+}
+.hamburger {
+    justify-self: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.hamburger > div {
+    width: 20px;
+    border: 2px solid white;
+    border-radius: 100px;
+}
+.hamburger-top {
+}
+.hamburger-mid {
+}
+.hamburger-bot {
+}
+#toggle {
+    display: none;
+}
+
+#toggle:checked {
+    + #hamburger {
+        .top {
+            transform: rotate(135deg) translate(7.5px, -7.5px);
+        }
+        .meat {
+            opacity: 0;
+        }
+        .bottom {
+            transform: rotate(-135deg) translate(7.5px, 7.5px);
+        }
+    }
+
+    ~ #menu-1 {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 .header-top > i {
     float: right;
@@ -43,7 +81,7 @@ header > .arrow-container > a{
 nav {
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 5px;
 }
 .header-top > nav > a {
     font-size: 1.2em;
