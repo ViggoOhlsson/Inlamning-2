@@ -9,4 +9,7 @@ gulp.task('watch-scss', function() {
     gulp.watch("scss/main.scss", gulp.series('compile'));
 });
 
-gulp.task('default', gulp.series('compile','watch.scss'), function(){});
+gulp.task('default', gulp.series('compile','watch-scss'), function(){});
+
+//install order
+// npm install -global
