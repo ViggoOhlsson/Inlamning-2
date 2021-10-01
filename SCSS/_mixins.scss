@@ -1,1 +1,12 @@
-@import 'variables';
+@use 'variables' as *;
+@use 'sass:color';
+
+
+%Extend {
+    // Content i en extend
+    color:white;
+}
+@mixin mixin() {
+    // Content i en mixin
+    color: white;
+}
